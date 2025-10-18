@@ -13,7 +13,7 @@ import time
 
 logger = get_logger(__name__)
 
-model_save_path = MODEL_SAVE_PATH
+model_save_path = "artifacts/models/"
 os.makedirs(model_save_path, exist_ok = True)
 
 

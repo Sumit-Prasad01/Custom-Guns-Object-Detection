@@ -80,7 +80,9 @@ class GunDataset(Dataset):
 
 if __name__ == "__main__":
 
-    dataset = GunDataset(root = ROOT_PATH, device = DEVICE)
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+
+    dataset = GunDataset(root = "artifacts/raw/", device = device)
 
     image, target = dataset[0]
     print(f"Image Shape :  {image.shape}")

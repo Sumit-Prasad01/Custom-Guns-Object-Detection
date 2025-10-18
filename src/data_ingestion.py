@@ -58,7 +58,7 @@ class DataIngestion:
                 logger.info("Labels moved successfully.")
 
             else:
-                logger.info("Labels folder don't exist.", e)
+                logger.info("Labels folder don't exist.")
 
 
         except Exception as e:

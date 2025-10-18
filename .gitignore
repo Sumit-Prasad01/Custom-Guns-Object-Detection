@@ -139,4 +139,6 @@ cython_debug/
 .vscode/
 
 artifacts/
+artifacts/raw/
+artifacts/models/
 tensorboard_logs/
