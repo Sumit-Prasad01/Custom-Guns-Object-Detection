@@ -8,3 +8,4 @@ albumentations
 requests
 pillow
 torchvision
+tensorboard

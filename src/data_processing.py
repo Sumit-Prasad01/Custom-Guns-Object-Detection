@@ -5,6 +5,7 @@ import numpy as np
 from torch.utils.data import Dataset
 from src.logger import get_logger
 from src.custom_exception import CustomException
+from config.paths_config import *
 
 logger =  get_logger(__name__)
 
@@ -61,7 +62,7 @@ class GunDataset(Dataset):
 
                 target["boxes"] = torch.tensor(box, dtype = torch.float32)
                 target["area"] =  torch.tensor(area, dtype = torch.float32)
-                target["labels"] = torch.tensor(labels, dtype = torch.float32)
+                target["labels"] = torch.tensor(labels, dtype = torch.int64)
 
             img_res = img_res.to(self.device)
             for key in target:
@@ -79,10 +80,7 @@ class GunDataset(Dataset):
 
 if __name__ == "__main__":
 
-    rooth_path = "artifacts/raw/"
-    device = "cuda" if torch.cuda.is_available() else "cpu"
-
-    dataset = GunDataset(root = rooth_path, device = device)
+    dataset = GunDataset(root = ROOT_PATH, device = DEVICE)
 
     image, target = dataset[0]
     print(f"Image Shape :  {image.shape}")
