@@ -116,14 +116,3 @@ All training runs are logged in `tensorboard_logs/`. You can visualize:
 - Expand dataset for multi-class object detection  
 
 ---
-
-## 👨‍💻 Author
-**Sumit Prasad**  
-Machine Learning Engineer | MLOps Enthusiast  
-📧 [Your Email] | 🌐 [Your Portfolio/GitHub]
-
----
-
-### 🏁 License
-This project is licensed under the MIT License.  
-See [LICENSE](LICENSE) for details.
