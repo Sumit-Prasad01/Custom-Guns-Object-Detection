@@ -10,3 +10,5 @@ pillow
 torchvision
 tensorboard
 dvc
+fastapi[all]
+uvicorn

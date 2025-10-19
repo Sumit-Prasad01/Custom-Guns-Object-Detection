@@ -64,7 +64,7 @@ class ModelTraining:
     def split_data(self):
         try:
             dataset = GunDataset(self.dataset_path, self.device)
-            dataset = torch.utils.data.Subset(dataset, range(5))
+            dataset = torch.utils.data.Subset(dataset, range(333))
 
             train_size = int(0.8*len(dataset))
             val_size = len(dataset) - train_size
